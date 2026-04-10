@@ -58,3 +58,10 @@ module "asg" {
   min_size         = 1
   max_size         = 3
 }
+module "ecr" {
+  source = "../../modules/ecr"
+
+  project     = "terraform-prod"
+  environment = "dev"
+ 
+}
